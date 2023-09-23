@@ -137,4 +137,5 @@ RSpec.describe "Merchant items index", type: :feature do
     expect(current_path).to eq("/merchants/#{@merchant_1.id}/items/#{@item_1_m1.id}")
     end
   end
+
 end

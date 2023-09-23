@@ -1,6 +1,9 @@
 def load_test_data
   #Merchants and items
     @merchant_1 = Merchant.create!(name: "Ray's Handmade Jewelry")
+      #merchant_1 discounts
+      @discount_1_m1 = @merchant_1.discounts.create!(percentage_discount: 20, quantity_threshold: 10)
+      @discount_2_m1 = @merchant_1.discounts.create!(percentage_discount: 30, quantity_threshold: 15)
       #merchant_1 items
       @item_1_m1 = @merchant_1.items.create!(name: "Watch", description: "goes tic tic", unit_price: 600, status: true)
       @item_2_m1 = @merchant_1.items.create!(name: "Ring", description: "For wife", unit_price: 1990, status: true)
@@ -14,6 +17,9 @@ def load_test_data
       @item_10_m1 = @merchant_1.items.create!(name: "Another watch", description: "Just like the first but cheaper", unit_price: 599, status: false)
 
     @merchant_2 = Merchant.create!(name: "Carls Cars")
+      #merchant_1 discounts
+      @discount_1_m2 = @merchant_1.discounts.create!(percentage_discount: 20, quantity_threshold: 10)
+      @discount_2_m2 = @merchant_1.discounts.create!(percentage_discount: 30, quantity_threshold: 15)
       #merchant_2 items
       @item_1_m2 = @merchant_2.items.create!(name: "Truck", description: "Mud Stuff", unit_price: 6000)
       @item_2_m2 = @merchant_2.items.create!(name: "Lambo", description: "Vroom", unit_price: 9999)
