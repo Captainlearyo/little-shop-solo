@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :items, module: :merchants, only: [:new, :create, :index, :show, :edit, :update]
     resources :invoices, module: :merchants, only: [:show, :index, :update]
     resource :dashboard, only: [:show], to: 'merchants#show'
-    resources :discounts, module: :merchants, only: [:show, :index]
+    resources :discounts, module: :merchants
   end
     # get "/merchants/:merchant_id/items/:item_id/edit", to: "merchants/items#edit"
     # get "/merchants/:merchant_id/items/new", to: "merchants/items#new"

@@ -1,5 +1,6 @@
 <h1>Discounts for <%= @merchant.name %></h1>
-
+<p><%= link_to 'Create New Discount', new_merchant_discount_path(@merchant) %></p>
+<%= flash[:notice] %>
 <ul>
   <% @merchant.discounts.each do |discount| %>
   <div id = <% discount.id %>>
