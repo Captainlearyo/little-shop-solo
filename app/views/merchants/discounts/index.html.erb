@@ -3,10 +3,12 @@
 <%= flash[:notice] %>
 <ul>
   <% @merchant.discounts.each do |discount| %>
-  <div id = <% discount.id %>>
+  <div id = <%= discount.id %>>
   <p><%= link_to "Discount ID: #{discount.id}", merchant_discount_path(@merchant, discount) %></p>
     <li> Quantity Threshold: <%= discount.quantity_threshold%> </li>
     <li> Percentage Discount: <%= discount.percentage_discount%> </li>
+    <%= button_to 'Delete', merchant_discount_path(@merchant, discount), method: :delete%></td>
     </div>
   <% end %>
 </ul>
+<%= flash[:notice] %>

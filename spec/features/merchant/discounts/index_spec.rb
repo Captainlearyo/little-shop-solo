@@ -34,14 +34,28 @@ RSpec.describe " Merchant Bulk Discounts Index" do
 
     fill_in 'Percentage discount', with: 60
     fill_in 'Quantity threshold', with: 50
-    save_and_open_page
     click_button 'Submit'
 
     expect(current_path).to eq(merchant_discounts_path(@merchant_1))
     expect(page).to have_content('Discount was successfully created.')
-    save_and_open_page
+  
       expect(page).to have_content('60')
       expect(page).to have_content('50')
+    
+  end
+
+  # user story 2.3
+  it "next to each bulk discount I see a button to delete it" do
+
+    visit merchant_discounts_path(@merchant_1)
+
+    expect(page).to have_content("#{@discount_1_m1.id}")
+    within ("##{@discount_1_m1.id}") do 
+    click_button "Delete"
+    end
+
+    expect(page).to_not have_content("#{@discount_1_m1.id}")
+    expect(page).to have_content('Discount was successfully deleted.')
     
   end
 

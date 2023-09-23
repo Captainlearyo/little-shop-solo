@@ -23,6 +23,15 @@ class Merchants::DiscountsController < ApplicationController
   
   end
 
+  def destroy
+    @merchant = Merchant.find(params[:merchant_id])
+    @discount = @merchant.discounts.find(params[:id])
+    @discount.destroy
+    redirect_to merchant_discounts_path(@merchant)
+    flash[:notice] = 'Discount was successfully deleted.'
+  end
+
+
   private
 
   def discount_params
