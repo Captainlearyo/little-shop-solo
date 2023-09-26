@@ -17,9 +17,9 @@ def load_test_data
       @item_10_m1 = @merchant_1.items.create!(name: "Another watch", description: "Just like the first but cheaper", unit_price: 599, status: false)
 
     @merchant_2 = Merchant.create!(name: "Carls Cars")
-      #merchant_1 discounts
-      @discount_1_m2 = @merchant_1.discounts.create!(percentage_discount: 20, quantity_threshold: 10)
-      @discount_2_m2 = @merchant_1.discounts.create!(percentage_discount: 30, quantity_threshold: 15)
+      #merchant_2 discounts
+      @discount_1_m2 = @merchant_2.discounts.create!(percentage_discount: 60, quantity_threshold: 1)
+      @discount_2_m2 = @merchant_2.discounts.create!(percentage_discount: 70, quantity_threshold: 3)
       #merchant_2 items
       @item_1_m2 = @merchant_2.items.create!(name: "Truck", description: "Mud Stuff", unit_price: 6000)
       @item_2_m2 = @merchant_2.items.create!(name: "Lambo", description: "Vroom", unit_price: 9999)
@@ -29,6 +29,9 @@ def load_test_data
       @item_6_m2 = @merchant_2.items.create!(name: "Tesla", description: "I love Elon", unit_price: 666)
 
     @merchant_3 = Merchant.create!(name: "Bobs Bakery")
+    #merchant_3 discounts
+    @discount_1_m3 = @merchant_3.discounts.create!(percentage_discount: 10, quantity_threshold: 1)
+    @discount_2_m3 = @merchant_3.discounts.create!(percentage_discount: 15, quantity_threshold: 2)
       #merchant_3 items
       @item_1_m3 = @merchant_3.items.create!(name: "Sour Dough", description: "My favorite", unit_price: 6)
       @item_2_m3 = @merchant_3.items.create!(name: "White", description: "lame", unit_price: 9)
@@ -38,6 +41,9 @@ def load_test_data
       @item_6_m3 = @merchant_3.items.create!(name: "Loaf", description: "Lot of bread", unit_price: 11)
 
     @merchant_4 = Merchant.create!(name: "Tony's Tints")
+    #merchant_3 discounts
+    @discount_1_m4 = @merchant_4.discounts.create!(percentage_discount: 10, quantity_threshold: 1)
+    @discount_2_m4 = @merchant_4.discounts.create!(percentage_discount: 15, quantity_threshold: 2)
       #merchant_4 items
       @item_1_m4 = @merchant_4.items.create!(name: "Light Tint", description: "Very legal", unit_price: 500)
       @item_2_m4 = @merchant_4.items.create!(name: "Medium Tint", description: "Somewhat legal", unit_price: 750)
@@ -51,6 +57,9 @@ def load_test_data
       @item_10_m4 = @merchant_4.items.create!(name: "Fuzzy dice for mirror", description: "Just go for it", unit_price: 50)
 
     @merchant_5 = Merchant.create!(name: "Shelly Seashells")
+    #merchant_5 discounts
+    @discount_1_m5 = @merchant_5.discounts.create!(percentage_discount: 10, quantity_threshold: 2)
+    @discount_2_m5 = @merchant_5.discounts.create!(percentage_discount: 15, quantity_threshold: 4)
       #merchant_5 items
       @item_1_m5 = @merchant_5.items.create!(name: "Mussell", description: "Iridescent", unit_price: 40)
       @item_2_m5 = @merchant_5.items.create!(name: "Cowry", description: "Shimmer", unit_price: 15)

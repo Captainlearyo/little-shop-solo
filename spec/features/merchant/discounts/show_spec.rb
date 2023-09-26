@@ -14,7 +14,7 @@ RSpec.describe " Merchant Bulk Discounts Index" do
     expect(page).to have_content(@discount_1_m1.id)
   end
 
-  # user story 2.4
+  # user story 2.5
   it "I see a link to edit the bulk discount" do
     visit merchant_discount_path(@merchant_1, @discount_1_m1)
 
@@ -27,8 +27,6 @@ RSpec.describe " Merchant Bulk Discounts Index" do
     click_button 'Submit'
 
     expect(current_path).to eq(merchant_discount_path(@merchant_1, @discount_1_m1))
-
-    save_and_open_page
 
     expect(page).to have_content('95')
     expect(page).to have_content('75')
