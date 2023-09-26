@@ -7,7 +7,7 @@ To achieve this, we completed all 36 user stories to build out functionality for
 If another developer were to work on this application in the future, it would be most beneficial to add styling to the application pages, add linking for better web page navigation, build in security features such as Oauth and add a customer interface.
 
 ### Solo Project
-
+in the solo portion of this project, The bulk discounts section was added. this class interacts with the invoice class to determine if any discounts are applicable to the transactions. each merchant has an available index page for their discounts . if given more time, links could be added to improve navigation.
 ### DTR
 - [DTR September 11, 2023](https://docs.google.com/document/d/1wZQGC192zhxWqzl1kNELGh7nnDWVAxdPcPMHRXT90yg/edit?usp=sharing)
 
