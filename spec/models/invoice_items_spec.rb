@@ -22,6 +22,24 @@ RSpec.describe InvoiceItem, type: :model do
         expect(@invoice_item_1_i1_c1.item_name).to eq("Sour Dough")
       end
     end
+
+    describe "#applicable_discount" do
+      it "can return the highest applicable discount" do
+        expect(@invoice_item_1_i1_c1.applicable_discount.percentage_discount).to eq(15)
+      end
+    end
+
+    describe "#apply_discount" do
+      it "can return the discounted price" do
+        expect(@invoice_item_1_i1_c1.apply_discount).to eq(5)
+      end
+    end
+
+    describe "#revenue" do
+      it "can return the discounted revenue" do
+        expect(@invoice_item_1_i1_c1.revenue).to eq(10)
+      end
+    end
   end
 
 end

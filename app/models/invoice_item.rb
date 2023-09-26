@@ -19,7 +19,6 @@ class InvoiceItem < ApplicationRecord
         .order(percentage_discount: :desc)
         .first
     else
-      percentage_discount = "nonet"
       false
     end
   end

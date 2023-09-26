@@ -44,6 +44,12 @@ RSpec.describe Invoice, type: :model do
       end
     end
 
+    describe "#total_discounted_revenue" do
+      it "can return the total discounted revenue of the invoice" do
+        expect(@invoice_2_c1.total_discounted_revenue).to eq(23437)
+      end
+    end
+
     describe "#format_created_at" do
       it "can return a formatted date" do
         expect(@invoice_2_c1.format_created_at).to eq("Saturday, March 10, 2012")
