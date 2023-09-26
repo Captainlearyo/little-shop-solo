@@ -51,8 +51,10 @@ RSpec.describe "Merchant Invoice Show Page", type: :feature do
    # User Story 2.7
    it "Next to each invoice item I see a link to the show page for the bulk discount that was applied" do
     visit merchant_invoice_path(@merchant_2, @invoice_2_c1)
-    save_and_open_page
+    expect(page).to have_content("Discount Applied: 60%")
+    expect(page).to have_content("Discount Applied: 70%")
+    expect(page).to have_content("Discount Applied: 70%")
     visit merchant_invoice_path(@merchant_6, @invoice_4_c1)
-    save_and_open_page
+    expect(page).to_not have_content("Discount Applied:")
   end
 end

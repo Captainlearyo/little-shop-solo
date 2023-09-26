@@ -9,7 +9,9 @@
       <strong> Item Quantity Ordered: </strong><%= invoice_item.quantity%> <br>
       <strong> Item Price: </strong><%= invoice_item.unit_price%> <br>
       <strong> Invoice Status: </strong><%= invoice_item.status%> <br>
+      <% if invoice_item.applicable_discount %>
       <strong> Discount Applied: </strong><%= invoice_item.applicable_discount.percentage_discount%>% <br>
+      <% end %>
       <%# <%= form_with url: "/merchants/#{@merchant.id}/invoices/#{invoice_item.invoice_id}", method: :patch do |f| %> 
       <%= form_with url: merchant_invoice_path(@merchant, invoice_item.invoice_id), method: :patch do |f| %>
         <%= f.hidden_field :invoice_item_id, value: invoice_item.id %> 
